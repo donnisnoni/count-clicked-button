@@ -52,23 +52,23 @@
   </head>
   <body>
     <div id="app">
-      <button>don</button>
+      <button id="btn-increment">Button</button>
     </div>
 
     <script>
       (function () {
-        const countButton = document.body.querySelector("button");
+        const btnIncrement = document.body.querySelector("#btn-increment");
         let count = 0;
 
         updateButtonCaption();
 
-        countButton.addEventListener("click", () => {
+        btnIncrement.addEventListener("click", () => {
           count++;
           updateButtonCaption();
         });
 
         function updateButtonCaption() {
-          countButton.textContent = `Saya diklik sebanyak ${count}x`;
+          btnIncrement.textContent = `Saya diklik sebanyak ${count}x`;
         }
       })();
     </script>
