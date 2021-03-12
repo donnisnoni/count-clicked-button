@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple App</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: #cecece;
+      }
+
+      #app {
+        margin: 20px auto;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 400px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 3px #38373780;
+        background-color: #fff;
+      }
+
+      button {
+        padding: 0.5em;
+        margin: 10px;
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <button>don</button>
+    </div>
+
+    <script>
+      (function () {
+        const countButton = document.body.querySelector("button");
+        let count = 0;
+
+        updateButtonCaption();
+
+        countButton.addEventListener("click", () => {
+          count++;
+          updateButtonCaption();
+        });
+
+        function updateButtonCaption() {
+          countButton.textContent = `Saya diklik sebanyak ${count}x`;
+        }
+      })();
+    </script>
+  </body>
+</html>
