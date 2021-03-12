@@ -49,6 +49,12 @@
         padding: 0.5em;
         margin: 10px;
         font-size: 1.1em;
+        transition: transform 0.2s ease;
+        will-change: transform;
+      }
+
+      button:active {
+        transform: scale(0.9);
       }
 
       @media (min-width: 400px) {
